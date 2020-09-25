@@ -1,3 +1,6 @@
+#this is example script we are going to use in our mini project
+#packages required are in comments
+
 import pyttsx3 #pip3 install pyttsx3
 import speech_recognition as sr #pip3 install speechRecognition
 import datetime
