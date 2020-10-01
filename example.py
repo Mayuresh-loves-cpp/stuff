@@ -59,6 +59,10 @@ def sendEmail(to, content):
     server.sendmail('youremail@gmail.com', to, content)
     server.close()
 
+#this new line added
+name = 'main'
+#-------------------
+
 if name == "main":
     wishMe()
     while True:
