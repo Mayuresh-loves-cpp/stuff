@@ -13,9 +13,87 @@
         android:text="@string/create_account"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.187"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.382" />
+        app:layout_constraintVertical_bias="0.071" />
+
+    <EditText
+        android:id="@+id/editTextTextFirstName"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="27dp"
+        android:ems="10"
+        android:hint="@string/first_name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/editTextTextLastName"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="27dp"
+        android:ems="10"
+        android:hint="@string/second_name"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextFirstName"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextFirstName"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/editTextTextContactNumber"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="27dp"
+        android:ems="10"
+        android:hint="@string/mobile_number"
+        android:inputType="numberSigned"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextLastName"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextLastName"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextLastName"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/editTextTextCreateNewPassword"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="27dp"
+        android:ems="10"
+        android:hint="@string/create_new_password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextContactNumber"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextContactNumber"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextContactNumber"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/editTextTextConfirmPassword"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="27dp"
+        android:ems="10"
+        android:hint="@string/confirm_password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextCreateNewPassword"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextCreateNewPassword"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextCreateNewPassword"
+        android:autofillHints="" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/create_account"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.791"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextConfirmPassword"
+        app:layout_constraintVertical_bias="0.118" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
