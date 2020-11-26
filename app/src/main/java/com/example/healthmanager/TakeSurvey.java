@@ -7,7 +7,11 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.TextView;
+
+import static com.example.healthmanager.R.array.contactTypes;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -60,6 +64,19 @@ public class TakeSurvey extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_take_survey, container, false);
+
+        View v = inflater.inflate(R.layout.fragment_take_survey, container, false);
+
+        Spinner contactSpinnerView = (Spinner) v.findViewById(R.id.contactSpinner);
+
+        String[] contactsItem = getResources().getStringArray(contactTypes);
+
+        ArrayAdapter<String> contactTypesAdapter = new ArrayAdapter<String>(
+                getActivity(), android.R.layout.simple_list_item_1, contactsItem
+        );
+        contactTypesAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        contactSpinnerView.setAdapter(contactTypesAdapter);
+
+        return v;
     }
 }

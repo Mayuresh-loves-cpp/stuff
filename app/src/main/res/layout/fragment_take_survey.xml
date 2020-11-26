@@ -14,118 +14,163 @@
         android:text="Take Survey"
         android:textSize="40sp" />
 
-    <androidx.cardview.widget.CardView
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="7dp"
-        android:layout_marginRight="7dp"
-        android:layout_marginTop="100dp"
-        android:backgroundTint="#f1f1f1">
-
-
-        <TextView
-            android:layout_width="wrap_content"
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="10dp">
+        <GridLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="7dp"
-            android:layout_marginTop="8dp"
-            android:text="Provide us with your age"
-            android:textAlignment="center"
-            android:textSize="18dp" />
+            android:columnCount="1"
+            android:rowCount="4">
 
-        <EditText
-            android:layout_width="75dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="33dp"
-            android:hint="age"
-            android:inputType="number" />
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="7dp"
-        android:layout_marginTop="200dp"
-        android:layout_marginRight="7dp"
-        android:backgroundTint="#f1f1f1">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="7dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginRight="7dp"
-            android:text="Do you know your body temperature? If yes please provide in Fahrenheit"
-            android:textSize="18dp" />
-
-        <EditText
-            android:layout_width="75dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="53dp"
-            android:hint="in °f"
-            android:inputType="number" />
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="7dp"
-        android:layout_marginTop="320dp"
-        android:layout_marginRight="7dp"
-        android:backgroundTint="#f1f1f1">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="7dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginRight="7dp"
-            android:text="Do you know your body Oxygen level? If yes please select any one below option"
-            android:textSize="18dp" />
-
-        <RadioGroup
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="55dp">
-            <RadioButton
-                android:id="@+id/goodRadioButton"
-                android:layout_width="wrap_content"
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="7dp"
-                android:layout_marginTop="0dp"
-                android:text="Good - for Oxygen greater than 95 per." />
-                <!--android:onClick="checkButtonOxy"-->
+                android:layout_marginRight="7dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#f1f1f1">
 
-            <RadioButton
-                android:id="@+id/lowRadioButton"
-                android:layout_width="wrap_content"
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Provide us with your age"
+                    android:textAlignment="center"
+                    android:textSize="18dp" />
+
+                <EditText
+                    android:layout_width="75dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="33dp"
+                    android:hint="age"
+                    android:inputType="number" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="7dp"
-                android:layout_marginTop="0dp"
-                android:text="Low - for Oxygen greater than 90 per." />
-                <!--android:onClick="checkButtonOxy"-->
-            <RadioButton
-                android:id="@+id/veryLowRadioButton"
-                android:layout_width="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="7dp"
+                android:backgroundTint="#f1f1f1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="7dp"
+                    android:text="Do you know your body temperature? If yes please provide in Fahrenheit"
+                    android:textSize="18dp" />
+
+                <EditText
+                    android:layout_width="75dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="53dp"
+                    android:hint="in °f"
+                    android:inputType="number" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="7dp"
-                android:layout_marginTop="0dp"
-                android:text="Very Low - for Oxygen less than 90 per." />
-                <!--android:onClick="checkButtonOxy"-->
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="7dp"
+                android:backgroundTint="#f1f1f1">
 
-            <RadioButton
-                android:id="@+id/dontKnowRadioButton"
-                android:layout_width="wrap_content"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="7dp"
+                    android:text="Do you know your body Oxygen level? If yes please select any one below option"
+                    android:textSize="18dp" />
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="55dp">
+                    <RadioButton
+                        android:id="@+id/goodRadioButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginTop="0dp"
+                        android:text="Good - for Oxygen greater than 95 per." />
+                    <!--android:onClick="checkButtonOxy"-->
+
+                    <RadioButton
+                        android:id="@+id/lowRadioButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginTop="0dp"
+                        android:text="Low - for Oxygen greater than 90 per." />
+                    <!--android:onClick="checkButtonOxy"-->
+                    <RadioButton
+                        android:id="@+id/veryLowRadioButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginTop="0dp"
+                        android:text="Very Low - for Oxygen less than 90 per." />
+                    <!--android:onClick="checkButtonOxy"-->
+
+                    <RadioButton
+                        android:id="@+id/dontKnowRadioButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginTop="0dp"
+                        android:text="Don't Know" />
+                    <!--android:onClick="checkButtonOxy"-->
+
+                </RadioGroup>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="7dp"
-                android:layout_marginTop="0dp"
-                android:text="Don't Know" />
-            <!--android:onClick="checkButtonOxy"-->
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="7dp"
+                android:backgroundTint="#f1f1f1">
 
-        </RadioGroup>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="7dp"
+                    android:textSize="18dp"
+                    android:text="Have you been in contact with anyone having any infectious diseases? Please select disease that person had" />
 
-    </androidx.cardview.widget.CardView>
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="90dp"
+                    android:layout_marginRight="1in"
+                    android:id="@+id/contactSpinner"/>
+
+            </androidx.cardview.widget.CardView>
+
+        </GridLayout>
+    </ScrollView>
+
+
+
+
 
 </FrameLayout>
