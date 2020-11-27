@@ -31,7 +31,7 @@
                 android:layout_marginLeft="7dp"
                 android:layout_marginRight="7dp"
                 android:layout_marginTop="10dp"
-                android:backgroundTint="#f1f1f1">
+                android:backgroundTint="@color/cardview_light_background">
 
 
                 <TextView
@@ -58,7 +58,7 @@
                 android:layout_marginLeft="7dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="7dp"
-                android:backgroundTint="#f1f1f1">
+                android:backgroundTint="@color/cardview_light_background">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -85,7 +85,7 @@
                 android:layout_marginLeft="7dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="7dp"
-                android:backgroundTint="#f1f1f1">
+                android:backgroundTint="@color/cardview_light_background">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -145,7 +145,7 @@
                 android:layout_marginLeft="7dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="7dp"
-                android:backgroundTint="#f1f1f1">
+                android:backgroundTint="@color/cardview_light_background">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -166,11 +166,75 @@
 
             </androidx.cardview.widget.CardView>
 
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/cardview_light_background">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Tell us your symptoms"
+                    android:textAlignment="center"
+                    android:textSize="18dp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="33dp"
+                    android:hint="symptom 1"
+                    android:inputType="textAutoCorrect" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="76dp"
+                    android:hint="symptom 2"
+                    android:inputType="textAutoCorrect" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="119dp"
+                    android:hint="symptom 3"
+                    android:inputType="textAutoCorrect" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="162dp"
+                    android:hint="symptom 4"
+                    android:inputType="textAutoCorrect" />
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="250dp"
+                android:layout_marginRight="7dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/design_default_color_secondary"
+                style="@style/Animation.Design.BottomSheetDialog"
+                android:text="@string/saveDataButton"
+                android:textAllCaps="false">
+
+            </Button>
+
         </GridLayout>
     </ScrollView>
-
-
-
-
 
 </FrameLayout>
