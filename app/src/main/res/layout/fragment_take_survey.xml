@@ -191,7 +191,9 @@
                     android:layout_marginRight="15dp"
                     android:layout_marginTop="33dp"
                     android:hint="symptom 1"
-                    android:inputType="textAutoCorrect" />
+                    android:id="@+id/symptom1"
+                    android:inputType="textAutoCorrect"
+                    android:text="" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -200,7 +202,9 @@
                     android:layout_marginRight="15dp"
                     android:layout_marginTop="76dp"
                     android:hint="symptom 2"
-                    android:inputType="textAutoCorrect" />
+                    android:id="@+id/symptom2"
+                    android:inputType="textAutoCorrect"
+                    android:text="" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -209,7 +213,9 @@
                     android:layout_marginRight="15dp"
                     android:layout_marginTop="119dp"
                     android:hint="symptom 3"
-                    android:inputType="textAutoCorrect" />
+                    android:id="@+id/symptom3"
+                    android:inputType="textAutoCorrect"
+                    android:text="" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -218,7 +224,9 @@
                     android:layout_marginRight="15dp"
                     android:layout_marginTop="162dp"
                     android:hint="symptom 4"
-                    android:inputType="textAutoCorrect" />
+                    android:id="@+id/symptom4"
+                    android:inputType="textAutoCorrect"
+                    android:text="" />
             </androidx.cardview.widget.CardView>
 
             <Button
@@ -230,7 +238,8 @@
                 android:backgroundTint="@color/design_default_color_secondary"
                 style="@style/Animation.Design.BottomSheetDialog"
                 android:text="@string/saveDataButton"
-                android:textAllCaps="false">
+                android:textAllCaps="false"
+                android:id="@+id/save_data">
 
             </Button>
 

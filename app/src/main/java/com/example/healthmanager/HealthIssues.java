@@ -1,5 +1,7 @@
 package com.example.healthmanager;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,6 +9,11 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+
+import java.util.Arrays;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -59,6 +66,75 @@ public class HealthIssues extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_health_issues, container, false);
+        View view = inflater.inflate(R.layout.fragment_health_issues, container, false);
+
+        /*Bundle bundle = getArguments();
+        assert bundle != null;
+        String firstSymptom = bundle.getString("s1");
+        String secondSymptom = bundle.getString("s2");
+        String thirdSymptom = bundle.getString("s3");
+        String fourthSymptom = bundle.getString("s4");
+
+        Search s = new Search();
+        if (firstSymptom != null){
+            s.clearSymptomList();
+            s.searchDisease(firstSymptom);
+        }
+        if (secondSymptom != null){
+            s.clearSymptomList();
+            s.searchDisease(secondSymptom);
+        }
+        if (thirdSymptom != null){
+            s.clearSymptomList();
+            s.searchDisease(thirdSymptom);
+        }
+        if (firstSymptom != null){
+            s.clearSymptomList();
+            s.searchDisease(fourthSymptom);
+        }*/
+
+        SharedPreferences sharedPreferences = getActivity().getSharedPreferences("surveyData", Context.MODE_PRIVATE);
+        String firstSymptom = sharedPreferences.getString("symptom1", "");
+        String secondSymptom = sharedPreferences.getString("symptom2", "");
+        String thirdSymptom = sharedPreferences.getString("symptom3", "");
+        String fourthSymptom = sharedPreferences.getString("symptom4", "");
+        Search s = new Search();
+        if (firstSymptom != null){
+            System.out.println("1st symptom was: " + firstSymptom);
+            s.clearSymptomList();
+            s.searchDisease(firstSymptom);
+        }
+        if (secondSymptom != null){
+            System.out.println("2nd symptom was: " + secondSymptom);
+            s.clearSymptomList();
+            s.searchDisease(secondSymptom);
+        }
+        if (thirdSymptom != null){
+            System.out.println("3rd symptom was: " + thirdSymptom);
+            s.clearSymptomList();
+            s.searchDisease(thirdSymptom);
+        }
+        if (firstSymptom != null){
+            System.out.println("4th symptom was: " + fourthSymptom);
+            s.clearSymptomList();
+            s.searchDisease(fourthSymptom);
+        }
+        String[] st;
+        if (s.givenSymptomList != null){
+            st = s.initialDiseaseList;
+        }
+        else {
+            st = new String[1];
+            st[0] = "No Data";
+        }
+        ListView listView = (ListView) view.findViewById(R.id.predictedDiseasesList);
+        ArrayAdapter <String> predictedListAdapter = new ArrayAdapter<String>(
+                getActivity(),
+                android.R.layout.simple_list_item_1,
+                st
+        );
+        listView.setAdapter(predictedListAdapter);
+        System.out.println(Arrays.toString(st));
+        return view;
     }
 }
